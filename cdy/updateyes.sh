@@ -73,7 +73,7 @@ else
   # Tambahkan perintah rm untuk file lainnya...
 wget -q -O /etc/version "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mitych/versiupdate" && chmod +x /etc/version
   rm -f /usr/bin/menu
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mitych/menu.sh" && chmod 777 /usr/bin/menu
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mitych/cdy/menu.sh" && chmod 777 /usr/bin/menu
 
 
 fi

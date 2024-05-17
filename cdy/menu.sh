@@ -49,7 +49,7 @@ export Server_IP="underfined"
 export Script_Mode="Stable"
 export Auther="XdrgVPN"
 # Getting
-echo "sedang memverifkasi"
+#echo "sedang memverifkasi"
 MYIP=$(wget -qO- ipinfo.io/ip);
 CEKEXPIRED () {
     today=$(date -d +1day +%Y-%m-%d)
@@ -61,7 +61,6 @@ echo -e "\e[31m di tolak!\e[0m"
     exit 
 fi
 }
-
 if [ ! -e /tmp/trojan ]; then
   mkdir -p /tmp/trojan
 fi
@@ -85,7 +84,7 @@ fi
 # status
 rm -rf /root/status
 wget -q -O /root/status "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/statushariini" 
-
+clear
 today=`date -d "0 days" +"%Y-%m-%d"`
 Exp2=$(curl -sS https://raw.githubusercontent.com/LunaticBackend/regip/mytich/ipreg | grep $MYIP | awk '{print $3}')
 if [ "$Exp2" == "lifetime" ]; then
@@ -95,7 +94,7 @@ fi
 d1=$(date -d "$Exp2" +%s)
 d2=$(date -d "$today" +%s)
 left=$(((d1 - d2) / 86400))
-
+clear
 
  
 rm cybervpn.zip
@@ -121,7 +120,7 @@ cpu2="$(mpstat | awk '{print $6}' | head -4 |tail -n 1)"
 
 #update
 wget -q -O updatsc.sh "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/cdy/updateyes.sh" && chmod +x updatsc.sh && ./updatsc.sh 
-
+clear
 # // Exporting IP Address
 export MYIP=$( curl -s https://ipinfo.io/ip/ )
 Name=$(curl -sS https://raw.githubusercontent.com/LunaticBackend/regip/mytich/ipreg | grep $MYIP | awk '{print $2}')

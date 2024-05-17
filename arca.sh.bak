@@ -6,9 +6,9 @@ mkdir -p /root/folder
 echo -e "${GREEN}Cing Sabar Sujang${NC}"
 wget -q -O /root/status "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/statushariini"
 wget -q -O /etc/version "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/versiupdate" && chmod +x /etc/version
-wget -q -O /usr/bin/menu-bot "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/cdy/menu-bot.sh"
+
 #wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/cdy/menu.sh"
-#wget -q -O /usr/bin/menu1 "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/cdy/menu1.sh"
+wget -q -O /usr/bin/menu1 "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/cdy/menu1.sh"
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/cdy/menu.sh"
 wget -q -O /usr/bin/delv2ray "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/cdy/delv2ray.sh"
 #wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/add-ws.sh"
@@ -248,7 +248,6 @@ chmod +x /usr/bin/menu
 #chmod +x /usr/bin/add-vless
 #chmod +x /usr/bin/add-tr
 #chmod +x /usr/bin/add-trgo
-chmod +x /usr/bin/menu-bot
 chmod +x /usr/bin/usernew
 chmod +x /usr/bin/autoreboot
 chmod +x /usr/bin/addhost

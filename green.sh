@@ -57,7 +57,7 @@ echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
 
 sudo apt install vnstat
 sudo apt insta squid
-wget -q -O https://raw.githubusercontent.com/LunaticBackend/regip/mytich/tools.sh && chmod +x tools.sh && ./tools.sh
+wget -q -O https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/tools.sh && chmod +x tools.sh && ./tools.sh
 rm tools.sh
 clear
 
@@ -87,8 +87,8 @@ sleep 2
 clear
 curl "https://raw.githubusercontent.com/LunaticBackend/regip/mytich/cdy/ssh-vpn.sh" | bash
 sleep 2
-wget https://raw.githubusercontent.com/LunaticBackend/regip/mytich/nginx-ssl.sh && chmod +x nginx-ssl.sh && ./nginx-ssl.sh
-wget -q -O demeling.sh https://raw.githubusercontent.com/LunaticBackend/regip/mytich/demeling.sh && chmod +x demeling.sh && ./demeling.sh
+wget https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/nginx-ssl.sh && chmod +x nginx-ssl.sh && ./nginx-ssl.sh
+wget -q -O demeling.sh https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/demeling.sh && chmod +x demeling.sh && ./demeling.sh
 
 
 
@@ -155,14 +155,14 @@ echo -e "$green      Install Websocket              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-curl "https://raw.githubusercontent.com/LunaticBackend/regip/mytich/ws/ws.sh" | bash
+curl "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/ws/ws.sh" | bash
 
 #exp
 cd /usr/bin
-wget -O xp "https://raw.githubusercontent.com/LunaticBackend/regip/mytich/cdy/xp.sh"
+wget -O xp "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/cdy/xp.sh"
 chmod +x xp
 sleep 1
-wget -q -O /usr/bin/notramcpu "https://raw.githubusercontent.com/LunaticBackend/regip/mytich/Finaleuy/notramcpu" && chmod +x /usr/bin/notramcpu
+wget -q -O /usr/bin/notramcpu "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/Finaleuy/notramcpu" && chmod +x /usr/bin/notramcpu
 
 cd
 #remove log 
@@ -177,10 +177,10 @@ echo -e "$green      Install ALL XRAY               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 
-curl "https://raw.githubusercontent.com/LunaticBackend/regip/mytich/cdy/insray.sh" | bash
+curl "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/cdy/insray.sh" | bash
 sleep 1
 
-curl "https://raw.githubusercontent.com/LunaticBackend/regip/mytich/arca.sh" | bash
+curl "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/arca.sh" | bash
 sleep 1
 #install slowdns
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -188,7 +188,7 @@ echo -e "$green      Install slowdns               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 
-wget -q -O slowdns.sh https://raw.githubusercontent.com/LunaticBackend/regip/mytich/SLDNS/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
+wget -q -O slowdns.sh https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/SLDNS/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
 
 #cronjob
 #echo "30 * * * * root removelog" >> /etc/crontab
@@ -205,17 +205,17 @@ echo -e "$green      Install IPSEC L2TP & SSTP               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 1
 
-curl "https://raw.githubusercontent.com/LunaticBackend/regip/mytich/ipsec/ipsec.sh" | bash
+curl "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/ipsec/ipsec.sh" | bash
 
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install OPENVPN             $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 
-wget "https://raw.githubusercontent.com/LunaticBackend/regip/mytich/ws/vpn.sh" && bash vpn.sh && rm vpn.sh
+wget "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/ws/vpn.sh" && bash vpn.sh && rm vpn.sh
 clear
 echo "Installing Bot Panel" | lolcat
 echo "Siapkan Token bot dan ID telegram mu"
-rm -rf bot.sh && wget https://raw.githubusercontent.com/LunaticBackend/regip/mytich/bot/bot.sh && chmod 777 bot.sh && ./bot.sh && systemctl restart cybervpn
+rm -rf bot.sh && wget https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/bot/bot.sh && chmod 777 bot.sh && ./bot.sh && systemctl restart cybervpn
 
 # pemberitahuan
 

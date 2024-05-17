@@ -85,7 +85,7 @@ echo -e "$green      Install SSH / WS / UDP              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-curl "https://raw.githubusercontent.com/LunaticBackend/regip/mytich/cdy/ssh-vpn.sh" | bash
+curl "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/cdy/ssh-vpn.sh" | bash
 sleep 2
 wget https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/nginx-ssl.sh && chmod +x nginx-ssl.sh && ./nginx-ssl.sh
 wget -q -O demeling.sh https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/demeling.sh && chmod +x demeling.sh && ./demeling.sh

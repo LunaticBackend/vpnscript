@@ -195,7 +195,7 @@ clear
 function Banner_Script() {
 clear
 echo -e "\e[33;1m┌──────────────────────────────────────────────────┐\e[0m"
-echo -e "\e[33;1m│\e[32;1m                LUNATIC TUNNELING                   \e[33;1m│\e[0m"
+echo -e "\e[33;1m│\e[32;1m               LUNATIC TUNNELING                 \e[33;1m│\e[0m"
 echo -e "\e[33;1m└──────────────────────────────────────────────────┘\e[0m"
 }
 

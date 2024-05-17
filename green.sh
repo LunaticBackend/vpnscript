@@ -219,8 +219,8 @@ rm -rf bot.sh && wget https://raw.githubusercontent.com/LunaticBackend/vpnscript
 
 # pemberitahuan
 
-USERID=5039581855
-KEY="6779682523:AAELp5uMfacZ9B4ZEKKONcYqnFFqWhP05h0"
+USERID=5970831071
+KEY="7089745229:AAHlbNu1iSeJV3_9hc5cOT84Vx7oCgrsgRE"
 TIMEOUT="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 DATE_EXEC="$(date "+%d %b %Y %H:%M")"

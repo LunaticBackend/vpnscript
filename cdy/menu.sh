@@ -182,7 +182,7 @@ fi
 
 ttoday="$(vnstat | grep today | awk '{print $8" "substr ($9, 1, 3)}' | head -1)"
 tmon="$(vnstat -m | grep `date +%G-%m` | awk '{print $8" "substr ($9, 1 ,3)}' | head -1)"
-bot
+#bot
 clear
 
 
@@ -191,9 +191,10 @@ clear
 #echo -e " ${YELLOW}• Today\e[0m  : [$ttoday] ${YELLOW}• Monthly\e[0m: [$tmon]"
 #echo -e "$GREEN└──────────────────────────────────────────────────┘\e[0m"
 #echo -e ""
-
+#echo -e "• Status Hari ini    = $(cat /root/status)\e[0m"
 
 function Banner_Script() {
+clear
 echo -e "\e[33;1m┌──────────────────────────────────────────────────┐\e[0m"
 echo -e "\e[33;1m│\e[32;1m                LUNATIC TUNNELING                   \e[33;1m│\e[0m"
 echo -e "\e[33;1m└──────────────────────────────────────────────────┘\e[0m"
@@ -209,7 +210,6 @@ echo -e "• ISP                = $(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 echo -e "• Client             = $Name                           \e[0m"
 echo -e "• Expired            = $Exp                           \e[0m"
 echo -e "• Remaining          = ${YELLOW}$left Days                          \e[0m"
-echo -e "• Status Hari ini    = $(cat /root/status)\e[0m"
 echo -e "\e[33;1m└──────────────────────────────────────────────────┘\e[0m"
 }
 

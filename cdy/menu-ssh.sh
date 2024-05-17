@@ -443,7 +443,7 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 
 }
 
-
+function Menu_Display() {
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                         ⇱ SSH MENU  ⇲                         \E[0m"
@@ -461,12 +461,14 @@ echo -e "     ${BICyan}[${BIWhite}9${BICyan}] Trial SSH"
 echo -e "     ${BICyan}[${BIWhite}10${BICyan}] LOCK AKUN SSH"
 echo -e "     ${BICyan}[${BIWhite}11${BICyan}] UNLOCK AKUN SSH"
 echo -e "     ${BICyan}[${BIWhite}12${BICyan}] RECOVERY AKUN SSH EXPIRED"
-
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                        ⇱ LUNATIC TUNNELING ⇲                   \E[0m"
+echo -e "\E[44;1;39m                       ⇱ LUNATIC TUNNELING ⇲                   \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "     ${BIYellow}Press x or [ Ctrl+C ] • To-${BIWhite}Exit${NC}"
 echo ""
+}
+
+function Select_Display() {
 read -p " Select menu : " opt
 echo -e ""
 case $opt in
@@ -486,3 +488,8 @@ case $opt in
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back on menu" ; sleep 1 ; menu ;;
 esac
+}
+
+# // Call
+Menu_Display
+Select_Display

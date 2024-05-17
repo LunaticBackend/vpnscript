@@ -25,7 +25,7 @@ fi
 # Mod By SL
 # ==================================================
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/senowahyu62/scriptvps/main/ssh"
+akbarvpn="raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/ws"
 
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive

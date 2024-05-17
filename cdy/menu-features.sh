@@ -36,11 +36,11 @@ read -p "Select From 1 - 16 or x: " lunatic
 case $lunatic in
 1) clear ; running ;;
 2) clear ; restart ;;
-3) clear ; cf ;;
+3) clear ; cftn ;;
 4) clear ; fixhap ;;
 5) clear ; fixcert ;;
 6) clear ; UDEPE ;;
-7) clear ; menu-theme ;;
+7) clear ; theme ;;
 8) clear ; menu-backup ;;
 9) clear ; autobackup ;;
 10) clear ; bw ;;
@@ -48,7 +48,7 @@ case $lunatic in
 12) clear ; neo ;;
 13) clear ; about ;;
 14) clear ; updateyes ;;
-15) clear ; menu1 ;;
+15) clear ; menu ;;
 16) reboot ;;
 *) exit ;;
 esac

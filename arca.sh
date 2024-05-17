@@ -269,6 +269,9 @@ chmod +x /usr/bin/menu-ss
 chmod +x /usr/bin/updatsc
 chmod +x /usr/bin/menu
 chmod +x /usr/bin/menu-features
+chmod +x /usr/bin/restart
+chmod +x /usr/bin/bw
+chmod +x /usr/bin/menu-bot
 
 #chmod +x /usr/bin/menu-socks
 chmod +x /usr/bin/menu-trojan

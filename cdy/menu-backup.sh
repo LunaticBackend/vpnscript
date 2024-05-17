@@ -18,7 +18,7 @@ echo -e "${ungu}++++++++++++++++++++++++++++++++++++++++++++"
 echo -e
 echo -e "${BlueCyan}              Menu Backup                   "
 echo -e
-echo -e "            t.me/wongedan_kuwibebas"
+echo -e "            t.me/LunaticTunnel"
 echo -e "${ungu}++++++++++++++++++++++++++++++++++++++++++++"
 echo
 echo
@@ -41,7 +41,7 @@ figlet "backup" | lolcat
 mbackup
 echo "--------------------------------------------------------"
 echo
-echo "Terimakasih sudah menggunakan layanan script Gretongers Vpn Premium"
+echo "Terimakasih sudah menggunakan layanan script Lunatic Tunneling"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -52,7 +52,7 @@ figlet "Restore" | lolcat
 mrestore
 echo "--------------------------------------------------------"
 echo
-echo "Terimakasih sudah menggunakan layanan script Gretongers Vpn Premium"
+echo "Terimakasih sudah menggunakan layanan script Lunatic Tunneling"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -62,7 +62,7 @@ figlet "strt"
 mstrt
 echo "--------------------------------------------------------"
 echo
-echo "Terimakasih sudah menggunakan layanan script Gretongers Vpn Premium"
+echo "Terimakasih sudah menggunakan layanan script Lunatic Tunneling"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -71,7 +71,7 @@ then
 mlimitspeed
 echo "--------------------------------------------------------"
 echo
-echo "Terimakasih sudah menggunakan layanan script Gretongers Vpn Premium"
+echo "Terimakasih sudah menggunakan layanan script Lunatic Tunneling"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -81,7 +81,7 @@ then
 mautobackup
 echo "--------------------------------------------------------"
 echo
-echo "Terimakasih sudah menggunakan layanan script Gretongers Vpn Premium"
+echo "Terimakasih sudah menggunakan layanan script Lunatic Tunneling"
 echo
 echo "--------------------------------------------------------"
 fi

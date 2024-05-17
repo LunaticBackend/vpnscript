@@ -39,17 +39,17 @@ export RECEIVE="[${YELLOW} RECEIVE ${NC}]"
 export BOLD="\e[1m"
 export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
-export Server_URL="https://raw.githubusercontent.com/messiey/rocky/master/"
-export Server1_URL="https://raw.githubusercontent.com/messiey/rocky/master/"
+export Server_URL="https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/"
+export Server1_URL="https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/"
 export Server_Port="443"
 export Server_IP="underfined"
 export Script_Mode="Stable"
 export Auther=".geovpn"
 
 
-wget -q -O /usr/bin/lock "https://raw.githubusercontent.com/messiey/rocky/master/limit/user-lock.sh" && chmod 777 /usr/bin/lock
+wget -q -O /usr/bin/lock "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/limit/user-lock.sh" && chmod 777 /usr/bin/lock
 
-wget -q -O /usr/bin/unlock "https://raw.githubusercontent.com/messiey/rocky/master/limit/user-unlock.sh" && chmod 777 /usr/bin/unlock
+wget -q -O /usr/bin/unlock "https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/limit/user-unlock.sh" && chmod 777 /usr/bin/unlock
 
 if [ "${EUID}" -ne 0 ]; then
 echo -e "${EROR} Please Run This Script As Root User !"
@@ -461,7 +461,7 @@ echo -e "     ${BICyan}[${BIWhite}11${BICyan}] UNLOCK AKUN SSH"
 echo -e "     ${BICyan}[${BIWhite}12${BICyan}] RECOVERY AKUN SSH EXPIRED"
 
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                     ⇱ GRETONGERS VPN PREMIUM ⇲                   \E[0m"
+echo -e "\E[44;1;39m                        ⇱ LUNATIC TUNNELING ⇲                   \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "     ${BIYellow}Press x or [ Ctrl+C ] • To-${BIWhite}Exit${NC}"
 echo ""

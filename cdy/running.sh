@@ -358,82 +358,75 @@ fi
 total_ram=` grep "MemTotal: " /proc/meminfo | awk '{ print $2}'`
 totalram=$(($total_ram/1024))
 
-# TIPE PROCESSOR
-#totalcore="$(grep -c "^processor" /proc/cpuinfo)" 
-#totalcore+=" Core"
-#corediilik="$(grep -c "^processor" /proc/cpuinfo)" 
-#tipeprosesor="$(awk -F ': | @' '/model name|Processor|^cpu model|chip type|^cpu type/ {
-  #                      printf $2;
-      #                  exit
-    #                    }' /proc/cpuinfo)"
 
-# GETTING CPU INFORMATION
-#cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
-#cpu_usage="$((${cpu_usage1/\.*} / ${corediilik:-1}))"
-#cpu_usage+=" %"
+# // Loading Animasi
+loading() {
+  local pid=$1
+  local delay=0.1
+  local spin='-\|/'
 
-# OS UPTIME
-#uptime="$(uptime -p | cut -d " " -f 2-10)"
+  while ps -p $pid > /dev/null; do
+    local temp=${spin#?}
+    printf "[%c] " "$spin"
+    local spin=$temp${spin%"$temp"}
+    sleep $delay
+    printf "\b\b\b\b\b\b"
+  done
+
+  printf "    \b\b\b\b"
+}
+
 
 # KERNEL TERBARU
 kernelku=$(uname -r)
-
-# WAKTU SEKARANG 
-#harini=`date -d "0 days" +"%d-%m-%Y"`
-#jam=`date -d "0 days" +"%X"`
-
-# DNS PATCH
-#tipeos2=$(uname -m)
-#Name=$(curl -sS https://raw.githubusercontent.com/Fahmiiiiiiii/anjim/main/anjay/allow | grep $MYIP | awk '{print $2}')
-#Exp=$(curl -sS https://raw.githubusercontent.com/Fahmiiiiiiii/anjim/main/anjay/allow | grep $MYIP | awk '{print $3}')
-# GETTING DOMAIN NAME
 Domen="$(cat /etc/xray/domain)"
-echo -e ""
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m            ⇱ GRETONGERS VPN PREMIUIM ⇲           \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "❇️ Hostname    : $HOSTNAME"
-echo -e "❇️ OS Name     : $Tipe"
-# echo -e "Processor   : $tipeprosesor"
-# echo -e "Proc Core   :$totalcore"
-# echo -e "Virtual     :$typevps"
-# echo -e "Cpu Usage   :$cpu_usage"
-echo -e "❇️ Total RAM   : ${totalram}MB"
-echo -e "❇️ Public IP   : $MYIP"
-echo -e "❇️ Domain      : $Domen"
-#echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-#echo -e "\E[44;1;39m          ⇱ Subscription Information ⇲          \E[0m"
-#echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-#echo -e "❇️ Client Name : $Name"
-#echo -e "❇️ Exp Script  : $Exp"
-#echo -e "❇️ Version     : Latest Version"
+clear
+clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m            ⇱ Service Information ⇲             \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+sleep 0.8 & loading $!
 echo -e "❇️ SSH / TUN / websocket   :$status_ssh"
+sleep 0.8 & loading $!
 echo -e "❇️ OpenVPN                 :$status_vpn"
+sleep 0.8 & loading $!
 echo -e "❇️ Dropbear                :$status_beruangjatuh"
+sleep 0.8 & loading $!
 echo -e "❇️ Stunnel4                :$status_stunnel"
+sleep 0.8 & loading $!
 echo -e "❇️ Squid                   :$status_squid"
+sleep 0.8 & loading $!
 echo -e "❇️ Fail2Ban                :$status_fail2ban"
+sleep 0.8 & loading $!
 echo -e "❇️ Crons                   :$status_cron"
+sleep 0.8 & loading $!
 echo -e "❇️ Vnstat                  :$status_vnstat"
+sleep 0.8 & loading $!
 echo -e "❇️ XRAYS Vmess TLS         :$status_tls_v2ray"
+sleep 0.8 & loading $!
 echo -e "❇️ XRAYS Vmess None TLS    :$status_nontls_v2ray"
+sleep 0.8 & loading $!
 echo -e "❇️ XRAYS Vless TLS         :$status_tls_vless"
+sleep 0.8 & loading $!
 echo -e "❇️ XRAYS Vless None TLS    :$status_nontls_vless"
+sleep 0.8 & loading $!
 echo -e "❇️ XRAYS Trojan            :$status_virus_trojan"
+sleep 0.8 & loading $!
 echo -e "❇️ Trojan GO               :$status_virus_trojan"
-#echo -e "❇️ Trojan GFW              :$status_virus_trojangfw"
+sleep 0.8 & loading $!
 echo -e "❇️ Websocket TLS           :$shdroptls"
+sleep 0.8 & loading $!
 echo -e "❇️ Websocket None TLS      :$shdrophttp"
+sleep 0.8 & loading $!
 echo -e "❇️ SLOWDNS                 :$shdrophttp"
-#echo -e "❇️ TOR VPN                 :$status_tor"
+sleep 0.8 & loading $!
 echo -e "❇️ ANTI DDOS               :$status_ddos"
+sleep 0.8 & loading $!
 echo -e "❇️ UDP CUSTOM              :$status_udpcustom"
+sleep 0.8 & loading $!
 echo -e "❇️ BOT PANEL               :$status_bot"
+sleep 0.8 & loading $!
 echo -e "❇️ NOOBZVPNS               :$status_noob"
-
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"

@@ -20,7 +20,7 @@ LIGHT='\033[0;37m'
 ###########- END COLOR CODE -##########
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/messiey/rocky/master/gerung > /root/tmp
+    curl -sS https://raw.githubusercontent.com/LunaticBackend/regip/mytich/ipreg > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -38,7 +38,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/messiey/rocky/master/gerung | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/LunaticBackend/regip/mytich/ipreg | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -55,7 +55,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/messiey/rocky/master/gerung | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/LunaticBackend/regip/mytich/ipreg | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -85,7 +85,7 @@ if [ -z $user ]; then
 echo -e "$GREEN│${NC} [Error] Username cannot be empty "
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$GREEN│${NC}             • GRETONGERS VPN PREMIUM •              $NC"
+echo -e "$GREEN│${NC}             • LUNATIC TUNNELING •              $NC"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -102,7 +102,7 @@ echo -e "$GREEN┌────────────────────�
 echo -e "$GREEN│${NC} Please choose another name."
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$GREEN│${NC}             • GRETONGERS VPN PREMIUM •              $NC"
+echo -e "$GREEN│${NC}             •        LUNATIC TUNNELING •              $NC"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -370,7 +370,7 @@ echo -e "$COLOR1 ${NC} "
 echo -e "$COLOR1 ${NC} Link JSON : http://${domain}:81/ss-ws/ss-$user.txt"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$GREEN│${NC}             • GRETONGERS VPN PREMIUM •            $NC"
+echo -e "$GREEN│${NC}             • LUNATIC TUNNELING •            $NC"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -388,7 +388,7 @@ if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 echo -e "$GREEN│${NC}  • You have no existing clients!"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$GREEN│${NC}             • GRETONGERS VPN PREMIUM •             $NC"
+echo -e "$GREEN│${NC}             • LUNATIC TUNNELING •             $NC"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -404,7 +404,7 @@ echo -e "$GREEN│${NC}"
 echo -e "$GREEN│${NC}  • [NOTE] Press any key to back on menu"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$GREEN│${NC}             • GRETONGERS VPN PREMIUM •              $NC"
+echo -e "$GREEN│${NC}             • LUNATIC TUNNELING •              $NC"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo -e "$GREEN───────────────────────────────────────────────────${NC}"
 read -rp "   Input Username : " user
@@ -436,7 +436,7 @@ echo -e "$COLOR1│${NC}   Days Added  : $masaaktif Days"
 echo -e "$COLOR1│${NC}   Expired On  : $exp4"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$GREEN│${NC}             • GRETONGERS VPN PREMIUM •              $NC"
+echo -e "$GREEN│${NC}             • LUNATIC TUNNELING •              $NC"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -455,7 +455,7 @@ echo -e "$GREEN┌────────────────────�
 echo -e "$GREEN│${NC}  • You Dont have any existing clients!"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$GREEN│${NC}             • GRETONGERS VPN PREMIUM •              $NC"
+echo -e "$GREEN│${NC}             • LUNATIC TUNNELING •              $NC"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -490,7 +490,7 @@ echo -e "$COLOR1│${NC}   • Client Name : $user"
 echo -e "$COLOR1│${NC}   • Expired On  : $exp"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$GREEN│${NC}             • GRETONGERS VPN PREMIUM •             $NC"
+echo -e "$GREEN│${NC}             • LUNATIC TUNNELING •             $NC"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -542,7 +542,7 @@ done
 rm -rf /tmp/other.txt
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$GREEN│${NC}             • GRETONGERS VPN PREMIUM •           $NC"
+echo -e "$GREEN│${NC}               • LUNATIC TUNNELING •           $NC"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -560,7 +560,7 @@ echo -e " $COLOR1│$NC                                              ${NC} $COLO
 echo -e " $COLOR1│$NC   ${COLOR1}[00]${NC} • GO BACK${NC}                              $COLOR1│$NC"
 echo -e " $GREEN└───────────────────────────────────────────────┘${NC}"
 echo -e "$GREEN┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$GREEN│${NC}             • GRETONGERS VPN PREMIUM •         $NC"
+echo -e "$GREEN│${NC}               • LUNATIC TUNNELING •         $NC"
 echo -e "$GREEN└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -p " Select menu :  "  opt

@@ -253,7 +253,7 @@ case $lunatic in
 6) clear ; menu-trojan ;;
 7) clear ; menu-ipsec ;;
 8) clear ; menu-noobzvpns ;;
-9) clear ; panelbot ;;
+9) clear ; menu-bot ;;
 10) clear ; menu-features ;;
 *) exit ;;
 esac

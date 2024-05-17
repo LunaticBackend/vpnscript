@@ -85,7 +85,7 @@ echo -e "$green      Install SSH / WS / UDP              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-curl "https://raw.githubusercontent.com/LunaticBackend/regip/mytich/menu/ssh-vpn.sh" | bash
+curl "https://raw.githubusercontent.com/LunaticBackend/regip/mytich/cdy/ssh-vpn.sh" | bash
 sleep 2
 wget https://raw.githubusercontent.com/LunaticBackend/regip/mytich/nginx-ssl.sh && chmod +x nginx-ssl.sh && ./nginx-ssl.sh
 wget -q -O demeling.sh https://raw.githubusercontent.com/LunaticBackend/regip/mytich/demeling.sh && chmod +x demeling.sh && ./demeling.sh
@@ -272,7 +272,7 @@ fi
 fi
 mesg n || true
 clear
-menu1
+menu
 END
 chmod 644 /root/.profile
 if [ -f "/root/log-install.txt" ]; then

@@ -1,52 +1,55 @@
 #!/bin/bash
+#installer Websocker tunneling 
 
-# Installer WebSocket tunneling
 cd
-
-# Install Python
 apt install python -y
 
-# Remove old scripts if they exist
-rm -f /usr/local/bin/edu-proxy
-rm -f /usr/local/bin/ws-dropbear
-rm -f /usr/local/bin/ws-stunnel
+#Install Script Websocket-SSH Python
+wget -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/AndyyudaVPN/websocket/main/https.py && chmod +x /usr/local/bin/edu-proxy
+wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/ws/dropbear-ws.py.txt
+wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/ws/ws-stunnel.txt
+wget -O /usr/local/bin/edu-proxyovpn https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/ovpn.py && chmod +x /usr/local/bin/edu-proxyovpn
 
-# Remove old service files if they exist
-rm -f /etc/systemd/system/edu-proxy.service
-rm -f /etc/systemd/system/ws-dropbear.service
-rm -f /etc/systemd/system/ws-stunnel.service
-
-# Download new WebSocket-SSH Python scripts
-wget -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/Azigaming404/websocket/main/openssh.py && chmod +x /usr/local/bin/edu-proxy
-wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/ws/dropbear-ws.py.txt && chmod +x /usr/local/bin/ws-dropbear
-wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/ws/ws-stunnel.txt && chmod +x /usr/local/bin/ws-stunnel
-
-# Set permissions
+#izin permision
 chmod +x /usr/local/bin/edu-proxy
 chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-stunnel
+chmod +x /usr/local/bin/edu-proxyovpn
 
-# Download new systemd service files
+
+#System Direcly dropbear Websocket-SSH Python
 wget -O /etc/systemd/system/edu-proxy.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/http.service && chmod +x /etc/systemd/system/edu-proxy.service
+#System Dropbear Websocket-SSH Python
 wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/ws/service-wsdropbear.txt && chmod +x /etc/systemd/system/ws-dropbear.service
+
+#System SSL/TLS Websocket-SSH Python
 wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/LunaticBackend/vpnscript/mytich/ws/ws-stunnel.service.txt && chmod +x /etc/systemd/system/ws-stunnel.service
 
-# Reload systemd daemon to recognize new services
+##System Websocket-OpenVPN Python
+wget -O /etc/systemd/system/edu-proxyovpn.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/ovpn.service && chmod +x /etc/systemd/system/edu-proxyovpn.service
+
+#restart service
+#
 systemctl daemon-reload
 
-# Enable, start, and restart the ws-dropbear service
+#Enable & Start & Restart directly dropbear
+systemctl daemon-reload
+systemctl enable edu-proxy.service
+systemctl start edu-proxy.service
+systemctl restart edu-proxy.service
+
+#Enable & Start & Restart ws-dropbear service
 systemctl enable ws-dropbear.service
 systemctl start ws-dropbear.service
 systemctl restart ws-dropbear.service
 
-# Enable, start, and restart the ws-stunnel service
+#Enable & Start & Restart ws-openssh service
 systemctl enable ws-stunnel.service
 systemctl start ws-stunnel.service
 systemctl restart ws-stunnel.service
 
-# Optionally, if you need the edu-proxy service, uncomment the following lines
-# systemctl enable edu-proxy.service
-# systemctl start edu-proxy.service
-# systemctl restart edu-proxy.service
-
+systemctl daemon-reload
+systemctl enable edu-proxyovpn.service
+systemctl start edu-proxyovpn.service
+systemctl restart edu-proxyovpn.service
 clear

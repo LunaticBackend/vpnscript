@@ -239,16 +239,16 @@ if [ -n "$SSH_CLIENT" ] && [ -z "$TMUX" ]; then
 ==============================
 🕊 Informasi instalasi script 🕊
 ==============================
-🎲Tanggal: $DATE_EXEC
-🎲Domain: $(cat /etc/xray/domain) 
-🎲Status: Telah menginstall scriptmu
-🎲Hostname  : $HOSTNAME 
-🎲Publik IP :$IPADDR 
-🎲IP PROV   : $IP 
-🎲ISP       : $ORG
-🎲KOTA      : $CITY
-🎲PROVINSI  : $REGION
-🎲PORT SSH. : $PORT"
+🌷Tanggal: $DATE_EXEC
+🌷Domain: $(cat /etc/xray/domain) 
+🌷Status: Telah menginstall scriptmu
+🌷Hostname  : $HOSTNAME 
+🌷Publik IP :$IPADDR 
+🌷IP PROV   : $IP 
+🌷ISP       : $ORG
+🌷KOTA      : $CITY
+🌷PROVINSI  : $REGION
+🌷PORT SSH. : $PORT"
 	curl -s --max-time $TIMEOUT -d "chat_id=$USERID&disable_web_page_preview=1&text=$TEXT" $URL > /dev/null
 	rm $TMPFILE
 fi
@@ -285,6 +285,7 @@ rm -f ins-xray.sh
 rm -f senmenu.sh
 rm -f setupku.sh
 rm -f xraymode.sh
+rm -f green.sh
 
 echo "=====================-[  LUNATIC TUNNELING  ]-===================="
 echo ""
